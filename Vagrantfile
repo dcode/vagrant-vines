@@ -69,7 +69,7 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-  config.vm.provision "chef_solo" do |chef|
+  config.vm.provision "chef_zero" do |chef|
     chef.cookbooks_path = "chef-repo/cookbooks"
     chef.add_recipe "vines"
     chef.log_level = ENV.fetch("CHEF_LOG", "info").downcase.to_sym
